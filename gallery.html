@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Original Fitness | Gallery</title>
+  <link rel="stylesheet" href="./assets/styles.css"/>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <div class="logo"><span>Original<br>Fitness</span></div>
+      <div><h1>ORIGINAL <b>FITNESS</b></h1><p>Local Gym • Real Results</p></div>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="actions">
+      <button class="btn" data-open-join>Free Trial</button>
+      <button class="btn btn-primary" data-open-join>Join Now</button>
+      <button class="icon-btn hamburger" id="burger" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<aside class="drawer" id="drawer">
+  <div class="row">
+    <strong>Menu</strong>
+    <button class="icon-btn" id="drawerClose" aria-label="Close menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="contact.html">Contact</a>
+  <button class="btn btn-primary" style="width:100%; margin-top:10px" data-open-join>Join Now</button>
+</aside>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h3>Photo Gallery</h3>
+          <p>Swap these with real photos of the building and machines.</p>
+        </div>
+        <button class="btn btn-primary" data-open-join>Book a Tour</button>
+      </div>
+
+      <div class="masonry">
+        <div class="shot">
+          <img alt="Gym interior" src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1400&q=70">
+          <div class="cap">Main floor • Strength machines</div>
+        </div>
+        <div class="shot">
+          <img alt="Dumbbells" src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1400&q=70">
+          <div class="cap">Free weights • Dumbbell rack</div>
+        </div>
+        <div class="shot">
+          <img alt="Cardio" src="https://images.unsplash.com/photo-1599058917765-4f55b01f1df5?auto=format&fit=crop&w=1400&q=70">
+          <div class="cap">Cardio zone • Treadmills & bikes</div>
+        </div>
+        <div class="shot">
+          <img alt="Training area" src="https://images.unsplash.com/photo-1521805103424-d8f8430e8930?auto=format&fit=crop&w=1400&q=70">
+          <div class="cap">Functional corner • Mobility & mats</div>
+        </div>
+        <div class="shot">
+          <img alt="Bench press" src="https://images.unsplash.com/photo-1517838277536-f5f99be501a6?auto=format&fit=crop&w=1400&q=70">
+          <div class="cap">Benches • Press stations</div>
+        </div>
+        <div class="shot">
+          <img alt="Machines" src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1400&q=70">
+          <div class="cap">Machines • Leg & back</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><strong>Original Fitness</strong> • Address line • City • Postcode</div>
+    <div>Phone: +44 0000 000000 • hello@originalfitness.co.uk</div>
+  </div>
+</footer>
+
+<div class="modal-backdrop" id="joinModal">
+  <div class="modal">
+    <div class="modal-head">
+      <h4>Join / Free Trial</h4>
+      <button class="icon-btn" data-close-join aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <form class="modal-body form" id="joinForm">
+      <div class="field"><label>Full name</label><input required placeholder="John Smith"/></div>
+      <div class="field"><label>Phone</label><input required placeholder="+44 ..."/></div>
+      <div class="field"><label>Goal</label>
+        <select><option>Strength</option><option>Fat loss</option><option>Fitness</option><option>Mobility</option></select>
+      </div>
+      <div class="field"><label>Preferred time</label>
+        <select><option>Morning</option><option>Afternoon</option><option>Evening</option></select>
+      </div>
+      <div class="field full">
+        <label>Message</label>
+        <textarea placeholder="Any questions?"></textarea>
+        <div class="notice" id="joinMsg"></div>
+      </div>
+      <div class="modal-actions full" style="padding:0; border:0; justify-content:flex-end">
+        <button type="button" class="btn" data-close-join>Cancel</button>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="./assets/app.js"></script>
+</body>
+</html>

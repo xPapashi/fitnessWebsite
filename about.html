@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Original Fitness | About</title>
+  <link rel="stylesheet" href="./assets/styles.css"/>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <div class="logo"><span>Original<br>Fitness</span></div>
+      <div>
+        <h1>ORIGINAL <b>FITNESS</b></h1>
+        <p>Local Gym • Real Results</p>
+      </div>
+    </a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="actions">
+      <button class="btn" data-open-join>Free Trial</button>
+      <button class="btn btn-primary" data-open-join>Join Now</button>
+      <button class="icon-btn hamburger" id="burger" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<aside class="drawer" id="drawer">
+  <div class="row">
+    <strong>Menu</strong>
+    <button class="icon-btn" id="drawerClose" aria-label="Close menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="contact.html">Contact</a>
+  <button class="btn btn-primary" style="width:100%; margin-top:10px" data-open-join>Join Now</button>
+</aside>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="kicker"><span class="dot"></span> About Original Fitness</div>
+        <h2>REAL GYM. <span>REAL PEOPLE.</span></h2>
+        <p>
+          We focus on the essentials: great equipment, clean space, and a welcoming
+          vibe for beginners and experienced lifters.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn" href="gallery.html">See Photos</a>
+          <button class="btn btn-primary" data-open-join>Book a Tour</button>
+        </div>
+      </div>
+      <div class="hero-right" style="background:
+        linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.60)),
+        url('https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?auto=format&fit=crop&w=1400&q=70') center/cover no-repeat;">
+        <div class="overlay">
+          <div class="pill"><span class="dot"></span> Friendly onboarding for beginners</div>
+          <div class="pill">Equipment walkthrough included</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="panel">
+        <h4>What you get</h4>
+        <ul class="list">
+          <li><b>Quality Machines</b><span>strength + isolation</span></li>
+          <li><b>Free Weights</b><span>full rack + benches</span></li>
+          <li><b>Cardio Zone</b><span>warm-up and conditioning</span></li>
+          <li><b>Support</b><span>simple, friendly guidance</span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h4>Our approach</h4>
+        <p style="color:var(--muted); margin-top:0; line-height:1.7">
+          We’re not about complicated trends. We help you build consistency with
+          clear routines and a space that feels good to train in.
+        </p>
+        <div class="kpi">
+          <div class="mini"><b>Clean</b><span>daily checklists</span></div>
+          <div class="mini"><b>Safe</b><span>maintained equipment</span></div>
+          <div class="mini"><b>Simple</b><span>clear membership</span></div>
+          <div class="mini"><b>Local</b><span>community vibe</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><strong>Original Fitness</strong> • Address line • City • Postcode</div>
+    <div>Phone: +44 0000 000000 • hello@originalfitness.co.uk</div>
+  </div>
+</footer>
+
+<!-- Join modal (same as home) -->
+<div class="modal-backdrop" id="joinModal">
+  <div class="modal">
+    <div class="modal-head">
+      <h4>Join / Free Trial</h4>
+      <button class="icon-btn" data-close-join aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <form class="modal-body form" id="joinForm">
+      <div class="field"><label>Full name</label><input required placeholder="John Smith"/></div>
+      <div class="field"><label>Phone</label><input required placeholder="+44 ..."/></div>
+      <div class="field"><label>Goal</label>
+        <select><option>Strength</option><option>Fat loss</option><option>Fitness</option><option>Mobility</option></select>
+      </div>
+      <div class="field"><label>Preferred time</label>
+        <select><option>Morning</option><option>Afternoon</option><option>Evening</option></select>
+      </div>
+      <div class="field full">
+        <label>Message</label>
+        <textarea placeholder="Any questions?"></textarea>
+        <div class="notice" id="joinMsg"></div>
+      </div>
+      <div class="modal-actions full" style="padding:0; border:0; justify-content:flex-end">
+        <button type="button" class="btn" data-close-join>Cancel</button>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="./assets/app.js"></script>
+</body>
+</html>
